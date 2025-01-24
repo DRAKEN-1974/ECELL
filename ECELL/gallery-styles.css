@@ -1,0 +1,191 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Default font for body text */
+}
+
+/* Colors */
+:root {
+  --bright-yellow: #f7c745; /* Bright yellow for headings */
+  --golden-yellow: #ffdb6d; /* Slightly softer yellow for highlights */
+  --white: #ffffff;
+  --black: #000000;
+  --dark-black: #111111; /* Dark black for headings */
+  --grey: #666;
+  --light-grey: #999;
+  --dark-grey: #333; /* Darker grey for improved text contrast */
+}
+
+/* Body */
+body {
+  background: var(--white); /* White background for the entire page */
+  color: var(--black);
+  font-size: 18px;
+  scroll-behavior: smooth;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #f7c745;
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #f7c745;
+  text-shadow: 0 0 10px #f7c745, 0 0 20px #f7c745;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  background-image: url('gallery-hero.jpg'); /* Replace with your hero image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6); /* Stronger shadow for better text visibility */
+}
+
+.hero-content .highlight {
+  color: var(--bright-yellow); /* Highlighted text with bright yellow */
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: var(--light-grey);
+  animation: fadeIn 2s ease;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Improved visibility for text */
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 80px; /* Added margin to offset fixed navigation */
+}
+
+.gallery-section h2, .event-gallery h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  color: var(--bright-yellow); /* Bright yellow for section titles */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Text shadow for better legibility */
+}
+
+/* Event Gallery */
+.event-gallery {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.event-gallery h3 {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: var(--white); /* White background for the gallery heading */
+  padding: 10px 0;
+  color: var(--dark-black); /* Dark black for gallery heading */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow for visibility */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Horizontal spacing between images */
+  overflow: hidden;
+  perspective: 1000px;
+  padding: 30px 0;
+}
+
+.gallery-grid img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+  border: 4px solid var(--bright-yellow); /* Bright yellow border for images */
+  transition: transform 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow around images */
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 179, 0, 0.6); /* Amber yellow shadow */
+  border-color: var(--golden-yellow); /* Golden yellow for highlighted borders */
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  padding: 30px 0;
+  text-align: center;
+  color: var(--light-grey);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow for footer text */
+  font-family: 'Inter', sans-serif;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 16px;
+  color: var(--light-grey);
+  font-weight: 400;
+}

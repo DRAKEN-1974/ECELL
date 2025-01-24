@@ -1,0 +1,286 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Colors */
+:root {
+  --yellow: #f7c745; /* Bright Yellow */
+  --black: #000000; /* Pitch Black */
+  --white: #ffffff; /* White */
+  --grey: #666; /* Dark Grey for text */
+  --light-grey: #999; /* Light Grey */
+  --dark-yellow: #f7c745; /* Deeper Yellow Shade */
+  --soft-yellow: #ffecb3; /* Soft Yellow for highlights */
+}
+
+/* Links */
+a {
+  color: inherit; /* This will make the link color inherit the color of the parent element */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #f7c745;
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #f7c745;
+  text-shadow: 0 0 10px #f7c745, 0 0 20px #f7c745;
+}
+
+/* Body */
+body {
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.8;
+  font-size: 18px;
+  scroll-behavior: smooth;
+  background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  color: var(--yellow);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(253, 216, 53, 0.8);
+  animation: slideIn 2s ease;
+}
+
+.contact-section p {
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: var(--light-grey);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 2s ease;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.contact-info .info-item {
+  background: var(--soft-yellow);
+  color: var(--black);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info .info-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(253, 216, 53, 0.5);
+}
+
+.contact-info .info-item h3 {
+  font-size: 22px;
+  color: var(--dark-yellow);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-info .info-item p {
+  font-size: 18px;
+  color: var(--grey);
+}
+
+.contact-info .info-item.icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info .info-item.icon i {
+  font-size: 30px;
+  color: var(--dark-yellow);
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--black);
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(253, 216, 53, 0.4);
+  animation: slideUp 2s ease;
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  color: var(--yellow);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--yellow);
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--grey);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 10px rgba(253, 216, 53, 0.5);
+}
+
+.contact-form .dual-group {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form .dual-group input {
+  flex: 1;
+}
+
+.contact-form button {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--black);
+  color: var(--yellow);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(253, 216, 53, 0.5);
+}
+
+/* FAQ Contact Section Spacing */
+.contact {
+  margin-bottom: 800px; /* Increased gap between the contact form and FAQ section */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+footer p {
+  color: var(--grey);
+  margin-top: 20px;
+}
